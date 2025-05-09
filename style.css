@@ -428,94 +428,49 @@ th, td{
     margin-bottom: 10px;
 }
 @media(max-width:991x){
-    .menu{
-        padding: 20px;
-    }
-    .menu label{
-        display: initial;
-    }
-    .menu .navbar{
-        position:absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #111111;
-        display: none;
-    }
-    .menu .navbar ul li{
-        width: 100%;
-    }
-    .menu ul li a{
-        color: #E8E8E8;
-    }
-    #menu:checked ~ .navbar{
-        display: initial;
-    }
-    .logo{
-        display: none;
-    }
-    .submenu:hover #carrito{
-        min-width: 100%;
-    }
-    .headder{
-        min-height: 0vh;
-    }
-    .header-content{
-        padding: 50px 0;
-        flex-direction: column;
-    }
-    .header-img{
-        display: none;
-    }
-    .header-txt{
-        flex-basis: 100%;
-        text-align: center;
-    }
-    .header-txt h1{
-        font-size: 70px;
-    }
-    .ofert{
-        padding: 30px 30px 0 30px;
-        flex-direction: column;
-    }
-    .ofert-1{
-        margin-bottom: 30px;
-    }
-    .products{
-        padding: 0 30px 30px 30px;
-    }
-    .products h2{
-        margin-bottom: 30px;
-    }
-    .product-content{
-        grid-template-columns: repeat(1,1fr);
-        gap: 30px;
-    }
-    .product img{
-        width: 200px;
-        height: 280px;
-    }
-    .icons{
-        padding: 5px;
-        flex-direction: column;
-    }
-    .icon-1{
-        margin-bottom: 3px;
-    }
-    .blog{
-        padding: 0 30px 30px 30px;
-        flex-direction: column;
-    }
-    .blog-1{
-        margin-bottom: 30px;
-    }
-    .footer{
-        padding: 60px;
-    }
-    .footer-content{
-        flex-direction: column;
-        text-align: center;
-    }
-    
+    @media (max-width: 768px) {
+  /* Contenedor de productos: una sola columna en móviles */
+  .productos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  /* Cada producto ocupa todo el ancho */
+  .producto {
+    padding: 12px;
+    text-align: center;
+  }
+
+  /* Imágenes responsivas */
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Botón adaptado a pantalla móvil */
+  .producto button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 8px;
+  }
+
+  /* Barra de categoría */
+  .categoria-barra {
+    font-size: 20px;
+    padding: 12px;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+
+  /* Ajustes para la cabecera si usas una */
+  .header {
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+  }
 
 }
