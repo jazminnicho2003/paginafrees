@@ -427,50 +427,73 @@ th, td{
     display: block;
     margin-bottom: 10px;
 }
-@media(max-width:991x){
-    @media (max-width: 768px) {
-  /* Contenedor de productos: una sola columna en móviles */
-  .productos-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 10px;
-  }
-
-  /* Cada producto ocupa todo el ancho */
-  .producto {
-    padding: 12px;
-    text-align: center;
-  }
-
-  /* Imágenes responsivas */
-  .producto img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Botón adaptado a pantalla móvil */
-  .producto button {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-    margin-top: 8px;
-  }
-
-  /* Barra de categoría */
-  .categoria-barra {
-    font-size: 20px;
-    padding: 12px;
-    text-align: center;
-    background-color: #f8f8f8;
-  }
-
-  /* Ajustes para la cabecera si usas una */
-  .header {
-    font-size: 22px;
-    padding: 10px;
-    text-align: center;
-  }
-
-}
+@media(max-width:768px){
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+    
+      /* Navbar: navegación superior centrada y en columna si es necesario */
+      nav,
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+    
+      nav a,
+      .navbar a {
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+      }
+    
+      /* Carrusel o slider: que ocupe todo el ancho */
+      .carousel,
+      .slider,
+      .carousel-inner,
+      .carousel-item,
+      .carousel img {
+        width: 100% !important;
+        height: auto !important;
+      }
+    
+      /* Ajustes de imagen dentro del carrusel */
+      .carousel img {
+        object-fit: cover;
+        border-radius: 0;
+      }
+    
+      /* Ajuste del contenedor de productos (si usas uno) */
+      .productos-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 10px;
+      }
+    
+      .producto {
+        text-align: center;
+        padding: 10px;
+      }
+    
+      .producto img {
+        width: 100%;
+        height: auto;
+      }
+    
+      .producto button {
+        width: 100%;
+        font-size: 16px;
+      }
+    
+      /* Encabezado / título de categoría */
+      .categoria-barra,
+      .header {
+        font-size: 20px;
+        padding: 12px;
+        text-align: center;
+      }
+    }
